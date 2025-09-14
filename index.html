@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Earthquake Develop</title>
+    <!-- Leaflet library-->
+    <!-- <style>
+      .mapContainer {
+        height: 1000px;
+        width: 100%;
+      }
+      #map {
+        height: 90%;
+      }
+    </style> -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+
+    <link rel="stylesheet" href="../yannainghtoo/yannainhtoo.css" />
+    <link rel="stylesheet" href="../yulay/yulay.css" />
+    <link rel="stylesheet" href="../EiThiriMon/newstyle.css" />
+    <link rel="stylesheet" href="../EiThiriMon/style.css" />
+    <link
+      rel="stylesheet"
+      href="../phyothiriwai/historical_earthquake/test.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../LinLatNwe/newstyle.css" />
+    <link rel="stylesheet" href="../Zue/zue.css" />
+    <link rel="stylesheet" href="../Thant Zin Htun/thantzinhtun.css">
+  </head>
+  <body>
+    <!--NavBar-->
+    <nav class="navbar">
+      <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
+
+      <button type="button" class="navbar-burger" onclick="toggleMenuOpen()">
+        <span class="material-icons">menu</span>
+      </button>
+
+      <h1 class="navbar-title">Group1</h1>
+      <nav class="navbar-menu">
+        <a href="#" class="active">About Us</a>
+        <a href="#" class="active">Emergency Contact</a>
+        <a
+          href="../haymannwin/HayMannWin/HayMannWin.html"
+          class="active"
+          >Donate</a
+        >
+        <a href="#" class="active">Quiz</a>
+      </nav>
+    </nav>
+    
+
+    <script type="text/javascript">
+      const toggleMenuOpen = () => document.body.classList.toggle("open");
+    </script>
+    <br />
+    <br />
+    <!-- map container-->
+     <div class="mapContainer">
+        <div id="map"></div>
+     </div>
+  
+ 
+      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  
+      <script src="../Thant Zin Htun/thantzinhtun.js"></script>
+    <!--yannainghtoo-->
+    <div class="header-1">
+      <h1>EARTHQUAKE</h1>
+      <h3>How Earthquake Develop?</h3>
+    </div>
+     <div class="header-2">
+      <!-- <h2>How Earthquake Develop?</h2> -->
+      <p>Earthquakes develop when stress builds up along tectonic plate boundaries—divergent, convergent, or transform—until the pressure overcomes friction, causing a sudden slip. This releases energy as seismic waves, including fast P-waves, slower S-waves, and destructive surface waves like Love and Rayleigh waves.</p> 
+    </div>
+  
+   <div class="case">
+    <div class="paragraph">
+      <p>Earthquakes are sudden ground movements caused by shifts in Earth's crust, often due to tectonic plate activity. While most are too small to feel, powerful quakes can trigger tsunamis, landslides, and structural collapses, posing serious risks in populated areas. Learn more about these unpredictable Earth tremorsand what to do if one
+      rattles near you.</p> 
+      <div><img class="photo1" src="../yannainghtoo/intro.jpg" /></div>
+    </div>
+     <div class="fact">
+      <p>Major quakes often start at a fault's nucleation zone, with foreshocks sometimes preceding the main event. Aftershocks follow as the crust adjusts. Some earthquakes, like megathrust quakes at subduction zones, can exceed magnitude 9, while others are triggered by volcanic activity or human actions like mining or fluid injection.</p>
+      <div><img class="photo2" src="../yannainghtoo/wave.jpg" /></div>
+    </div>
+   </div>
+   
+     
+    </div>
+    <br />
+    <!--eithirimon-->
+    <header>
+      <h1>🌍 Earthquake Safety Guide</h1>
+      <p>Your essential steps to stay safe during and after an earthquake.</p>
+    </header>
+
+    <main>
+      <!-- DURING AN EARTHQUAKE -->
+      <section class="card">
+        <h2>During an Earthquake</h2>
+        <div class="steps">
+          <a href="../EiThiriMon/drop.html" class="dropstep">
+            <div class="step">
+              <img src="../EiThiriMon/drop.jpg" alt="Drop" />
+              <h3>Drop</h3>
+              <p>
+                Get low on your hands and knees to prevent being knocked over.
+              </p>
+            </div>
+          </a>
+          <a href="../EiThiriMon/drop.html" class="dropstep">
+            <div class="step">
+              <img src="../EiThiriMon/cover.jpg" alt="Cover" />
+              <h3>Cover</h3>
+              <p>
+                Take shelter under sturdy furniture and protect your head and
+                neck.
+              </p>
+            </div>
+          </a>
+          <a href="../EiThiriMon/hold.html" class="dropstep">
+            <div class="step">
+              <img src="../EiThiriMon/holdon.jpg" alt="Hold On" />
+              <h3>Hold On</h3>
+              <p>Hold on to your shelter until the shaking stops.</p>
+            </div>
+          </a>
+
+          <a href="../EiThiriMon/staycalm.html" class="dropstep">
+            <div class="step">
+              <img src="../EiThiriMon/PTSD.jpg" alt="Stay Calm" />
+              <h3>Stay Calm</h3>
+              <p>Keep calm and follow your safety plan without rushing.</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- AFTER AN EARTHQUAKE -->
+      <section class="card">
+        <h2>After an Earthquake</h2>
+        <div class="steps">
+          <div class="step">
+            <img src="../EiThiriMon/PTSD.jpg" alt="PTSD Awareness" />
+            <h3>Check for Injuries & PTSD</h3>
+            <p>
+              Seek medical attention if injured. Get emotional support to manage
+              trauma.
+            </p>
+          </div>
+          <div class="step">
+            <img src="../EiThiriMon/safety.jpg" alt="Turn Off Utilities" />
+            <h3>Turn Off Utilities</h3>
+            <p>Shut off gas, water, and electricity if there is damage.</p>
+          </div>
+          <div class="step">
+            <img src="../EiThiriMon/StayAway.jpg" alt="Avoid Hazards" />
+            <h3>Stay Away from Hazards</h3>
+            <p>Keep clear of broken glass, debris, and unstable buildings.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--yulay-->
+    <!-- Header -->
+    <header>
+      <h1>Earthquake Knowledges</h1>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+      <a href="#measurement">How to Measure Earthquakes</a>
+      <a href="#where">Seismic Zones</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Measurement Section -->
+      <section id="measurement">
+        <h2>How to Measure Earthquakes</h2>
+        <p>
+          Earthquakes are measured to determine both their
+          <strong>strength</strong> and <strong>impact</strong> on people and
+          structures, using two main parameters: magnitude and intensity.
+        </p>
+
+        <h2>Magnitude</h2>
+        <p>
+          Magnitude is a quantitative measure of the energy released at the
+          earthquake's source.
+          <strong>Seismographs</strong> record seismic waves. The
+          <em>Moment Magnitude Scale (Mw)</em>
+          is the most accurate scale for all sizes of earthquakes.
+        </p>
+
+        <h2>Intensity</h2>
+        <p>
+          Intensity describes the observed effects at specific locations,
+          including impacts on people, buildings, and the environment. The
+          <em>Modified Mercalli Intensity (MMI)</em>
+          scale ranges from imperceptible tremors to catastrophic damage.
+        </p>
+        <h2>Importance</h2>
+        <ul>
+          <li>Guides structural engineering and safe building design.</li>
+          <li>Helps urban planners identify high-risk areas.</li>
+          <li>Supports emergency preparedness and early warning systems.</li>
+          <li>
+            Provides scientific data for research and disaster mitigation.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Where Earthquakes Occur -->
+      <section id="where">
+        <h2>Seismic Zones</h2>
+
+        <div>
+          <span class="chip">Plate Boundaries</span>
+          <span class="chip">Ring of Fire</span>
+          <span class="chip">Intraplate Zones</span>
+          <span class="chip">Volcanic Regions</span>
+        </div>
+
+        <div class="grid" style="margin-top: 12px">
+          <!-- Column A -->
+          <div>
+            <p>
+              <strong>Plate Boundaries</strong> — Most earthquakes cluster where
+              tectonic plates meet:
+            </p>
+            <ul>
+              <li>
+                <strong>Convergent:</strong> Powerful quakes at subduction and
+                collision zones.
+              </li>
+              <li>
+                <strong>Divergent:</strong> Moderate events along oceanic
+                ridges.
+              </li>
+              <li>
+                <strong>Transform:</strong> Shallow quakes along strike-slip
+                faults, like San Andreas.
+              </li>
+            </ul>
+            <div class="callout">
+              <strong>Key idea:</strong> Stress builds at boundaries until
+              sudden slip releases energy as seismic waves.
+            </div>
+          </div>
+
+          <!-- Column B -->
+          <div>
+            <p>
+              <strong>Global Concentrations</strong> — Notable seismic belts
+              include:
+            </p>
+            <ul>
+              <li>
+                <strong>Pacific Ring of Fire:</strong> Most active belt with
+                frequent quakes and volcanoes.
+              </li>
+              <li>
+                <strong>Alpine–Himalayan Belt:</strong> Stretches from
+                Mediterranean to Himalayas.
+              </li>
+              <li>
+                <strong>Intraplate Earthquakes:</strong> Occur inside plates on
+                ancient fault lines.
+              </li>
+              <li>
+                <strong>Volcanic Areas:</strong> Quakes caused by magma movement
+                underground.
+              </li>
+            </ul>
+            <div class="callout">
+              <strong>Remember:</strong> Earthquakes can also occur far from
+              plate edges due to crustal weaknesses.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--phyothiriwai-->
+    <div class="phyoCard" id="phyoCard">
+      <div class="phyoHeader">
+        <div class="phyoInfo">
+          <h3 style="text-align: center; justify-content: center;">Historical Earthquakes</h3>
+        </div>
+        <!-- <button class="btn">View All</button> -->
+      </div>
+       
+
+      <div class="phyoCard-items">
+        <div class="phyoItem">
+          <img src="../phyothiriwai/largest.jpg" />
+          <div class="phyoInfo">
+            <h4>1960 Valdivia ( Biobio )</h4>
+            <p>Magnitude : 9.5 - the largest ever</p>
+            <a href="../phyothiriwai/historical_earthquake/largest.html"
+              >See More <i class="bx bx-link-external"></i
+            ></a>
+        </div>
+        </div>
+        <div class="phyoItem">
+          <img src="../phyothiriwai/alaska.jpg" />
+          <div class="phyoInfo">
+            <h4>1964 Good Friday , Alaska</h4>
+            <p>Massive land uplift ; tsunamis</p>
+            <a href="../phyothiriwai/historical_earthquake/alaska.html">
+              See More<i class="bx bx-link-external"></i
+            ></a>
+            <div class="modal-background" onclick="toggleModal()"></div>
+          </div>
+        </div>
+        <div class="phyoItem">
+          <img src="../phyothiriwai/indian.jpg" />
+          <div class="phyoInfo">
+            <h4>Indian</h4>
+            <p>7.7 magnitude earthquake struck central Myanmar</p>
+            <a href="../phyothiriwai/historical_earthquake/indian.html">
+              See More <i class="bx bx-link-external"></i
+            ></a>
+           
+          </div>
+        </div>
+        <div class="phyoItem">
+          <img src="../phyothiriwai/japan.jpg" />
+          <div class="phyoInfo">
+            <h4>Japan</h4>
+            <p></p>
+            <a href="../phyothiriwai/historical_earthquake/japan.html">See More <i class="bx bx-link-external"></i
+            ></a>
+        </div>
+        </div>
+        <div class="phyoItem">
+          <img src="../phyothiriwai/bago.jpg" />
+          <div class="phyoInfo">
+            <h4>Bago</h4>
+            <p></p>
+            <a href="../phyothiriwai/historical_earthquake/bago.html"
+              >See More <i class="bx bx-link-external"></i
+            ></a>
+           
+        </div>
+        </div>
+        <div class="phyoItem">
+          <img src="../phyothiriwai/ava_amarapura.jpg" />
+          <div class="phyoInfo">
+            <h4>Ava</h4>
+            <p></p>
+            <a href="../phyothiriwai/historical_earthquake/ava.html"
+              >See More <i class="bx bx-link-external"></i
+            ></a>
+           
+        </div>
+        </div>
+        <div class="phyoItem">
+          <img src="../phyothiriwai/sagaing-mandalay.jpg" />
+          <div class="phyoInfo">
+            <h4>Sagaing-Mandalay</h4>
+            <p></p>
+            <a href="../phyothiriwai/historical_earthquake/sagaing-mandalay.html"
+              >See More <i class="bx bx-link-external"></i
+            ></a>
+           
+        </div>
+      </div>
+       <div class="phyoItem">
+          <img src="../phyothiriwai/1952.jpg" />
+          <div class="phyoInfo">
+            <h4>1952 Severo-Kurilsk Earthquake</h4>
+            <p></p>
+            <a href="../phyothiriwai/historical_earthquake/russia.html"
+              >See More <i class="bx bx-link-external"></i
+            ></a>
+           
+        </div>
+      </div>
+       <div class="phyoItem">
+          <img src="../phyothiriwai/chile.jpg" />
+          <div class="phyoInfo">
+            <h4>2010 Maule Earthquake (Chile)</h4>
+            <p></p>
+            <a href="../phyothiriwai/historical_earthquake/chile.html"
+              >See More <i class="bx bx-link-external"></i
+            ></a>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!--lynlatnwe-->
+    <header>
+      <h1>After an Earthquake,Situation at Tsunami and Volcano</h1>
+      <p>Live updates on Volcano, and Tsunami events</p>
+    </header>
+
+    <main class="container">
+      <section class="disaster">
+        <div class="disaster-content">
+          <img src="../LinLatNwe/tsunami.jpg" alt="Tsunami" />
+          <div class="text">
+            <h2>First Situation at Tsunami</h2>
+            <p>
+              <b>Massive Coastal Flooding-</b>Huge waves rush inland,destroying
+              buildings, infrastructure,and sweeping away people and objects.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="disaster">
+        <div class="disaster-content">
+          <img src="../LinLatNwe/tsunami3.jpg" alt="Tsunami3" />
+          <div class="text">
+            <h2>Second Situation at Tsunami</h2>
+            <p>
+              <b>High Casualties & Displacement-</b>Many deaths and injuries
+              occur, and large populations are forced into emergency shelters.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="disaster">
+        <div class="disaster-content">
+          <img src="../LinLatNwe/tsunami1.jpg" alt="Tsunami1" />
+          <div class="text">
+            <h2>Third Situation at Tsunami</h2>
+            <p>
+              <b>Ongoing Hazards-</b>Aftershocks,additional waves,contaminated
+              water,and disease outbreaks threaten survivors.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="disaster">
+        <div class="disaster-content">
+          <img src="../LinLatNwe/volcano2.jpg" alt="Volcano2" />
+          <div class="text">
+            <h2>First Situation at Volcano</h2>
+            <p>
+              <b>Increased Eruption Risk-</b>Earthquake activity can push magma
+              closer to the surface,possibly triggering eruption.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="disaster">
+        <div class="disaster-content">
+          <img src="../LinLatNwe/volcano3.jpg" alt="Volcano3" />
+          <div class="text">
+            <h2>Second Situation at Volcano</h2>
+            <p>
+              <b>Dangerous Hazards-</b>Pyroclastic flows,lava,ashfall, and
+              lahars can cause severe destruction.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="disaster">
+        <div class="disaster-content">
+          <img src="../LinLatNwe/volcano.jpg" alt="Volcano Eruption" />
+          <div class="text">
+            <h2>Third Situation at Volcano</h2>
+            <p>
+              <b>Human & Environmental Impact-</b>Forced evacuations, air
+              polution, crop damage, and infrastructure loss.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--zue-->
+    <div class="container">
+      <div>
+        <h1>Before an Earthquake - Preparation</h1>
+        <h2>Create an Emergency Plan</h2>
+        <ul>
+          <li>
+            Identify safe spots in each room (under sturdy tables, away from
+            windows).
+          </li>
+          <li>Plan evacuation routes and meeting points.</li>
+          <li>Teach family members how to "Drop, Cover, and Hold On".</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Prepare an Emergency Kit</h2>
+        <ul>
+          <li>Water (at least 3 days' supply).</li>
+          <li>First-aid kit, flashlight, extra batteries.</li>
+          <li>Whistle, dust mask, personal documents, small cash.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Strengthen Your Home</h2>
+        <ul>
+          <li>Secure heavy furniture and appliances to walls.</li>
+          <li>Store breakable items in low, closed cabinets.</li>
+          <li>Check for structural weaknesses in your building.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Stay Informed</h2>
+        <ul>
+          <li>Know local earthquake risks.</li>
+          <li>Keep emergency contact numbers handy.</li>
+          <li>Follow local disaster management guidelines.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+      <div>
+        <h1>During an Earthquake - Safety Actions</h1>
+        <h2>Indoors</h2>
+        <ul>
+          <li>
+            Drop to the ground, cover your head/neck under sturdy furniture, and
+            hold on.
+          </li>
+          <li>Stay away from glass, mirrors, and heavy objects.</li>
+          <li>Do not run outside during shaking.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Outdoors</h2>
+        <ul>
+          <li>
+            Move to an open area away from buildings, power lines, and trees.
+          </li>
+          <li>Stay put until shaking stops.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>In a Vehicle</h2>
+        <ul>
+          <li>
+            Stop in a safe area away from bridges, tunnels, and overpasses.
+          </li>
+          <li>Stay inside until the shaking stops.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+      <div>
+        <h1>After an Earthquake - Recovery</h1>
+        <h2>Check for Injuries & Hazards</h2>
+        <ul>
+          <li>Give first aid if needed.</li>
+          <li>
+            Be careful of broken glass, gas leaks, and downed power lines.
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Expect Aftershocks</h2>
+        <ul>
+          <li>Stay alert and prepared to "Drop, Cover, and Hold On" again.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Communicate Safely</h2>
+        <ul>
+          <li>Use text messages or social media to contact family.</li>
+          <li>Keep phone lines free for emergencies.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Inspect Your Home</h2>
+        <ul>
+          <li>Avoid entering severely damaged buildings.</li>
+          <li>
+            Turn off gas, water, and electricity if you suspect leaks or damage.
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Follow Official Instructions</h2>
+        <ul>
+          <li>
+            Listen to the radio, TV, or trusted online sources for updates.
+          </li>
+          <li>Only return home when authorities say it's safe.</li>
+        </ul>
+      </div>
+    </div>
+
+<!--footer-->
+    <div class="footer">
+      <div class="footer-container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>GROUP</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Volunteer</a></li>
+              <li><a href="#">Content</a></li>
+            </ul>
+          </div>
+           <div class="footer-col">
+            <h4>GET HELP</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Web Tools</a></li>
+              <li><a href="#">Programs</a></li>
+            </ul>
+          </div>
+           <div class="footer-col">
+            <h4>LEGAL</h4>
+            <ul>
+              <li><a href="#">Accessibility</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Site Policies</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="social-link">
+              <a href="#"><i class="bx bxl-facebook"></i></a>
+              <a href="#"><i class="bx bxl-instagram"></i></a>
+              <a href="#"><i class="bx bxl-twitter"></i></a>
+              <a href="#"><i class="bx bxl-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
